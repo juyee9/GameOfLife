@@ -127,7 +127,6 @@ import de.bezier.guido.*;
       alive = Math.random() < .5; // 50/50 chance cell will be alive
       Interactive.add( this ); // register it with the manager
     }
-
     // called by manager
     public void mousePressed () {
       alive = !alive; //turn cell on and off with mouse press

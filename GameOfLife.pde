@@ -47,10 +47,7 @@ import de.bezier.guido.*;
       }
     }
     copyFromBufferToButtons();
-
-
   }
-
   public void keyPressed() {
     //your code here
     if(key == ' ')
@@ -59,12 +56,12 @@ import de.bezier.guido.*;
       for(int r = 0; r < NUM_ROWS; r++)
         for(int c = 0; c < NUM_COLS; c++)
           buttons[r][c].alive = false;
-    if(key == 'f')
-     frameRate(10);
-    if(key == 's')
+    if(key == '1')
      frameRate(2);
-    if(key == 'n')
-      frameRate(6);
+    if(key == '2')
+     frameRate(6);
+    if(key == '3')
+      frameRate(10);
   }
 
   public void copyFromBufferToButtons() {
@@ -93,7 +90,7 @@ import de.bezier.guido.*;
   else 
   return false;
   }
-
+  
   public int countNeighbors(int row, int col) {
   int neighbors = 0;
   if(isValid(row, col-1)==true && buttons[row][col-1].getLife()==true)
